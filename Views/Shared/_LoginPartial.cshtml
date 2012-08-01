@@ -1,6 +1,6 @@
 ﻿@if (Request.IsAuthenticated) {
     <p>
-        Hello, @( (User.Identity as Mvc4.OpenId.Sample.Models.OpenIdIdentity).OpenIdUser.Email)
+        Hello, @User.Identity.Name
         @Html.ActionLink("Log off", "LogOff", "Account")
     </p>
 } else {
